@@ -1,0 +1,248 @@
+/* ==============================================
+   Android Holo 主题 CSS 通用版
+   适用于任何网页 / 任何项目
+   纯净 CSS，无依赖，无竖线，无多余样式
+   ============================================== */
+
+/* 全局基础 */
+.holo-theme {
+  --holo-blue: #0099CC;
+  --holo-dark: #2D2D2D;
+  --holo-gray: #AAAAAA;
+  --holo-light-gray: #cccccc;
+  --holo-white: #ffffff;
+  --holo-bg: #2D2D2D;
+}
+
+/* 文本标题 h1~h6 */
+.holo-theme h1 {
+  font-size: 48px;
+  color: var(--holo-blue);
+  font-weight: 400;
+  margin: 24px 0 16px;
+  border-bottom: 2px solid #444;
+  padding-bottom: 12px;
+}
+.holo-theme h2 {
+  font-size: 40px;
+  color: var(--holo-blue);
+  font-weight: 400;
+  margin: 22px 0 14px;
+}
+.holo-theme h3 {
+  font-size: 34px;
+  color: var(--holo-white);
+  font-weight: 500;
+  margin: 20px 0 12px;
+}
+.holo-theme h4 {
+  font-size: 30px;
+  color: #eeeeee;
+  font-weight: 500;
+  margin: 18px 0 10px;
+}
+.holo-theme h5 {
+  font-size: 26px;
+  color: var(--holo-light-gray);
+  font-weight: 600;
+  margin: 16px 0 8px;
+}
+.holo-theme h6 {
+  font-size: 22px;
+  color: var(--holo-gray);
+  font-weight: 600;
+  margin: 14px 0 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* 普通文本 */
+.holo-text {
+  font-size: 24px;
+  color: var(--holo-white);
+  margin: 12px 0;
+}
+.holo-secondary {
+  font-size: 22px;
+  color: var(--holo-gray);
+  margin: 10px 0;
+}
+
+/* 输入框 */
+.holo-input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--holo-gray);
+  width: 100%;
+  font-size: 28px;
+  color: var(--holo-white);
+  padding: 12px 0;
+  outline: none;
+  margin-bottom: 16px;
+}
+.holo-input::placeholder {
+  color: var(--holo-gray);
+}
+.holo-input:focus {
+  border-bottom-color: var(--holo-blue);
+}
+
+/* 按钮 */
+.holo-btn {
+  background-color: #555555;
+  color: var(--holo-white);
+  border: none;
+  font-size: 28px;
+  padding: 16px 32px;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+  margin-right: 12px;
+  margin-bottom: 12px;
+}
+.holo-btn:hover {
+  background-color: #666666;
+}
+.holo-btn:active {
+  background-color: #888888;
+}
+.holo-btn.primary {
+  background-color: var(--holo-blue);
+}
+.holo-btn.primary:hover {
+  background-color: #00AADD;
+}
+
+/* 单选框 */
+.holo-radio {
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border: 3px solid var(--holo-gray);
+  border-radius: 50%;
+  margin-right: 14px;
+  position: relative;
+  background-color: transparent;
+}
+.holo-radio:checked {
+  border-color: var(--holo-blue);
+}
+.holo-radio:checked::after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-color: var(--holo-blue);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 复选框 */
+.holo-checkbox {
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border: 3px solid var(--holo-gray);
+  border-radius: 0;
+  margin-right: 14px;
+  position: relative;
+  background-color: transparent;
+}
+.holo-checkbox:checked {
+  border-color: var(--holo-blue);
+  background-color: var(--holo-blue);
+}
+.holo-checkbox:checked::after {
+  content: "✓";
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 开关 */
+.holo-switch {
+  appearance: none;
+  width: 60px;
+  height: 30px;
+  background-color: #666;
+  border-radius: 0;
+  position: relative;
+  margin-right: 14px;
+  transition: background-color 0.2s;
+}
+.holo-switch::before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background-color: #fff;
+  top: 1px;
+  left: 1px;
+  transition: left 0.2s;
+}
+.holo-switch:checked {
+  background-color: var(--holo-blue);
+}
+.holo-switch:checked::before {
+  left: 31px;
+}
+
+/* 滑块 */
+.holo-slider {
+  width: 100%;
+  height: 6px;
+  appearance: none;
+  background-color: #666;
+  margin: 20px 0;
+}
+.holo-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  background-color: var(--holo-blue);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* 下拉选择框 */
+.holo-select {
+  width: 100%;
+  font-size: 28px;
+  padding: 14px;
+  background-color: #444;
+  color: white;
+  border: 2px solid #666;
+  outline: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 24px;
+  margin-bottom: 16px;
+}
+.holo-select:focus {
+  border-color: var(--holo-blue);
+}
+
+/* 多行文本域 */
+.holo-textarea {
+  width: 100%;
+  min-height: 140px;
+  background: transparent;
+  border: 2px solid var(--holo-gray);
+  font-size: 24px;
+  color: white;
+  padding: 12px;
+  outline: none;
+  resize: vertical;
+  margin-top: 10px;
+}
+.holo-textarea:focus {
+  border-color: var(--holo-blue);
+}
